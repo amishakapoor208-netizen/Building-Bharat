@@ -6,22 +6,22 @@ export default function WhoIsThisFor() {
     { 
       title: "College Students", 
       description: "Students from any discipline looking to build a career in politics and policy",
-      icon: "/images/college-students.png"
+      icon: "/images/Vector.png"
     },
     { 
       title: "Career Switchers", 
       description: "Professionals from other fields wanting to transition into political consulting",
-      icon: "/images/career-switchers.png"
+      icon: "/images/icon-swap.png"
     },
     { 
       title: "Young Professionals", 
       description: "Early-career professionals seeking to specialize in government and policy work",
-      icon: "/images/young-professionals.png"
+      icon: "/images/icon-profile.png"
     },
     { 
       title: "Policy Enthusiasts", 
       description: "Anyone passionate about public service and creating positive social impact",
-      icon: "/images/policy-enthusiasts.png"
+      icon: "/images/Group 6.png"
     }
   ];
 
@@ -47,6 +47,8 @@ export default function WhoIsThisFor() {
                 alt={audience.title}
                 fill
                 className="object-contain"
+                quality={100}
+                priority
               />
             </div>
             

@@ -37,14 +37,16 @@ export default function ContactSection() {
               </div>
               
               {/* India Map Image Placeholder */}
-              <div className="relative w-[407.37px] h-[361.49px] bg-white/20 rounded-lg flex items-center justify-center">
-                {/* Placeholder for India Map Image */}
+              <div className="relative w-[407.37px] h-[361.49px] flex items-center justify-center">
+                {/* Building Bharat Logo */}
                 <Image
-                  src="/images/india-map.png"
-                  alt="India Map"
-                  width={407.37}
-                  height={361.49}
+                  src="/images/india.png"
+                  alt="Building Bharat"
+                  width={407}
+                  height={361}
                   className="object-contain"
+                  quality={100}
+                  priority
                 />
               </div>
             </div>

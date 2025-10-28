@@ -8,7 +8,7 @@ export default function JobOpportunities() {
           {/* Left side - Image */}
           <div className="relative h-96 lg:h-[400px] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/job-opportunities.jpg"
+              src="/images/program-b.png"
               alt="Job and Internship Opportunities"
               fill
               className="object-cover"

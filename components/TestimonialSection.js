@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -8,9 +9,10 @@ export default function TestimonialSection() {
     {
       id: 1,
       title: "Student to Social Impact Leader",
-      quote: "Building Bharat transformed the way I learn and think. With hands on projects, expert mentorship, and constant support, I discovered my leadership potential. I never imagined I’d lead initiatives in my own town while learning from top mentors across India. The journey wasn’t easy, but the Building Bharat team made it achievable every step, every doubt, every win was celebrated. If you're serious about growing and giving back to India, this is where you start.",
+      quote: "Building Bharat transformed the way I learn and think. With hands on projects, expert mentorship, and constant support, I discovered my leadership potential. I never imagined I'd lead initiatives in my own town while learning from top mentors across India. The journey wasn't easy, but the Building Bharat team made it achievable every step, every doubt, every win was celebrated. If you're serious about growing and giving back to India, this is where you start.",
       name: "Priya Sharma",
       role: "Student Leader, Nagpur",
+      image: "/images/priya-sharma.png",
       initials: "PS"
     },
     {
@@ -19,6 +21,7 @@ export default function TestimonialSection() {
       quote: "Before Building Bharat, I had big dreams but no direction. The courses opened up opportunities I never thought possible – from rural innovation challenges to real-world community projects. The mentors treated us like family and pushed us to aim higher. Today, I'm mentoring students from my own village and applying for fellowships that once felt out of reach. This platform is a launchpad for every Indian youth who wants to create change",
       name: "Ravi Kumar",
       role: "Youth Fellow, Bihar",
+      image: "/images/ravi-kumar.png",
       initials: "RK"
     },
     {
@@ -27,6 +30,7 @@ export default function TestimonialSection() {
       quote: "I used to believe students from tier 3 colleges couldn't compete. But Building Bharat changed my mindset. Through their programs, I built a strong portfolio, worked on local issues, and even led a state-level hackathon! This journey isn't just about jobs it's about purpose. I'm more confident, skilled, and connected to a mission bigger than myself.",
       name: "Sneha Joshi",
       role: "UX Intern & Community Volunteer, Pune",
+      image: "/images/sneha-joshi.png",
       initials: "SJ"
     }
   ]
@@ -76,8 +80,20 @@ export default function TestimonialSection() {
               </div>
               
               <div className="flex-shrink-0">
-                <div className="w-[345.9px] h-[393px] rounded-[35px] overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white text-7xl font-bold shadow-xl">
-                  {testimonials[currentIndex].initials}
+                <div className="w-[345.9px] h-[393px] rounded-[35px] overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-xl">
+                  {testimonials[currentIndex].image ? (
+                    <Image
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].name}
+                      width={345.9}
+                      height={393}
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <div className="text-white text-7xl font-bold">
+                      {testimonials[currentIndex].initials}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

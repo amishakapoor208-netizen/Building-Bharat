@@ -16,7 +16,7 @@ export default function Features() {
         "Q&A sessions with former parliamentarians",
         "Interactive policy workshops"
       ],
-      image: "/images/live-session.jpg",
+      image: "/images/program-a.png",
       imagePosition: "right"
     },
     {
@@ -33,7 +33,7 @@ export default function Features() {
         "Direct placement assistance",
         "Internship posting and industry Inserts"
       ],
-      image: "/images/job-opportunities.jpg",
+      image: "/images/image 7.png",
       imagePosition: "left"
     },
     {
@@ -50,7 +50,7 @@ export default function Features() {
         "Monthly government hackathons",
         "LinkedIn support, Career advice"
       ],
-      image: "/images/projects-hackathons.jpg",
+      image: "/images/program-b.png",
       imagePosition: "right"
     },
     {
@@ -67,7 +67,7 @@ export default function Features() {
         "Weekly mock interview sessions",
         "Personalized feedback and improvement plans"
       ],
-      image: "/images/mock-interviews.jpg",
+      image: "/images/image 9 (1).png",
       imagePosition: "left"
     }
   ]

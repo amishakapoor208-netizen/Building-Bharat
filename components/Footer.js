@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <Image
-                src="/images/logo.png"
+                src="/images/og-image.png"
                 alt="Building Bharat Logo"
                 width={180}
                 height={60}

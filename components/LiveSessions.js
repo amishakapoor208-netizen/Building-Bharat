@@ -45,7 +45,7 @@ export default function LiveSessions() {
           {/* Right side - Image */}
           <div className="relative h-96 lg:h-[400px] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/live-session.jpg"
+              src="/images/program-a.png"
               alt="Live Interactive Sessions"
               fill
               className="object-cover"
