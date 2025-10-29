@@ -9,7 +9,14 @@ export default function Header() {
 
       <ul className="hidden md:flex items-center space-x-2 text-gray-700 font-medium text-sm flex-1 justify-center">
         <li>
-          <a href="#" className="px-4 lg:px-6 py-2.5 rounded-full bg-orange-500 text-white font-medium inline-block hover:bg-orange-600 transition">
+          <a 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="px-4 lg:px-6 py-2.5 rounded-full bg-orange-500 text-white font-medium inline-block hover:bg-orange-600 transition cursor-pointer"
+          >
             Home
           </a>
         </li>
@@ -26,7 +33,7 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a href="/programs" className="relative px-4 lg:px-6 py-2.5 rounded-full text-gray-700 font-medium inline-block overflow-hidden group">
+          <a href="#" className="relative px-4 lg:px-6 py-2.5 rounded-full text-gray-700 font-medium inline-block overflow-hidden group">
             <span className="relative z-10 group-hover:text-white transition-colors duration-300">Internships</span>
             <span className="absolute inset-0 bg-orange-500 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
           </a>

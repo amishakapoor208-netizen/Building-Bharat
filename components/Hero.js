@@ -2,6 +2,40 @@ import { motion } from 'framer-motion'
 import { Lightbulb, FileText, GraduationCap, Mic, BarChart, Brain } from "lucide-react"
 
 export default function Hero() {
+  // Define the orbit items with their positions
+  const orbitItems = [
+    {
+      Icon: Mic,
+      text: 'MLA/MP internships',
+      transform: 'rotate(0deg) translateY(-190px)', // Bottom
+    },
+    {
+      Icon: GraduationCap,
+      text: 'Fellowships',
+      transform: 'rotate(60deg) translateY(-190px)', // Bottom-left
+    },
+    {
+      Icon: FileText,
+      text: 'Public Policy',
+      transform: 'rotate(120deg) translateY(-190px)', // Top-left
+    },
+    {
+      Icon: Brain,
+      text: 'Political consulting',
+      transform: 'rotate(180deg) translateY(-190px)', // Top
+    },
+    {
+      Icon: Lightbulb,
+      text: 'Think Tanks',
+      transform: 'rotate(240deg) translateY(-190px)', // Top-right
+    },
+    {
+      Icon: BarChart,
+      text: 'Research',
+      transform: 'rotate(300deg) translateY(-190px)', // Bottom-right
+    },
+  ]
+
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-12 pt-[140px]">
       <div className="max-w-7xl mx-auto">
@@ -36,87 +70,41 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right side - Animated icons in circular layout */}
-          <div className="relative w-full h-[500px] hidden lg:flex items-center justify-center">
-            {/* Center text */}
-            <div className="absolute text-center z-10">
-              <h2 className="font-bold text-5xl leading-tight">
-                <span className="text-[#004D40]">Building</span><br/>
-                <span className="text-orange-500">BHARAT</span>
-              </h2>
+          {/* Right side - Circular rotating icons */}
+          <div className="relative w-full h-[400px] md:h-[500px] flex items-center justify-center">
+            {/* Animation container */}
+            <div className="relative flex h-full w-full items-center justify-center">
+              
+              {/* Center text */}
+              <div className="absolute z-10 flex flex-col items-center">
+                <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-center">
+                  <span className="text-[#004D40]">Building</span><br/>
+                  <span className="text-orange-500">BHARAT</span>
+                </h2>
+              </div>
+
+              {/* Orbit Container - This rotates */}
+              <div className="absolute h-[340px] w-[340px] md:h-[380px] md:w-[380px] rounded-full animate-spin-slow">
+                
+                {/* Map over orbit items */}
+                {orbitItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2"
+                    style={{ transform: item.transform }}
+                  >
+                    {/* Item Content - Counter-rotates to keep icons upright */}
+                    <div className="flex h-full w-full flex-col items-center justify-center animate-counter-spin-slow">
+                      <item.Icon className="text-orange-500 w-10 h-10" strokeWidth={1.5} />
+                      <p className="mt-1 text-center text-xs font-medium text-[#004D40] whitespace-nowrap">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+
+              </div>
             </div>
-
-            {/* Top center - Political consulting */}
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-0 left-1/2 -translate-x-1/2"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <Brain className="text-orange-500 w-10 h-10" />
-                <p className="text-sm font-medium text-[#004D40] whitespace-nowrap">Political consulting</p>
-              </div>
-            </motion.div>
-
-            {/* Top right - Think Tanks */}
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-10 right-0"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <Lightbulb className="text-orange-500 w-10 h-10" />
-                <p className="text-sm font-medium text-[#004D40] whitespace-nowrap">Think Tanks</p>
-              </div>
-            </motion.div>
-
-            {/* Bottom right - Research */}
-            <motion.div
-              animate={{ y: [0, 18, 0] }}
-              transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-10 right-0"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <BarChart className="text-orange-500 w-10 h-10" />
-                <p className="text-sm font-medium text-[#004D40] whitespace-nowrap">Research</p>
-              </div>
-            </motion.div>
-
-            {/* Bottom center - MLA/MP internships */}
-            <motion.div
-              animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 2.3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-              className="absolute bottom-0 left-1/2 -translate-x-1/2"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <Mic className="text-orange-500 w-10 h-10" />
-                <p className="text-sm font-medium text-[#004D40] whitespace-nowrap">MLA/MP internships</p>
-              </div>
-            </motion.div>
-
-            {/* Bottom left - Fellowships */}
-            <motion.div
-              animate={{ y: [0, -18, 0] }}
-              transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-              className="absolute bottom-10 left-0"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <GraduationCap className="text-orange-500 w-10 h-10" />
-                <p className="text-sm font-medium text-[#004D40] whitespace-nowrap">Fellowships</p>
-              </div>
-            </motion.div>
-
-            {/* Top left - Public Policy */}
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="absolute top-10 left-0"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <FileText className="text-orange-500 w-10 h-10" />
-                <p className="text-sm font-medium text-[#004D40] whitespace-nowrap">Public Policy</p>
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>

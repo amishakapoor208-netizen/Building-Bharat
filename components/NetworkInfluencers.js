@@ -78,7 +78,7 @@ export default function NetworkInfluencers() {
 
           {/* Building Bharat Logo in Center - Width: 221.15px, Height: 209.05px, Radius: 43px, Border: 1px */}
           <div className="flex justify-center my-8">
-            <div className="w-[221.15px] h-[209.05px] rounded-[43px] border border-orange-500 bg-white overflow-hidden flex items-center justify-center p-6 shadow-[0_4px_4.6px_rgba(249,124,4,0.4),_4px_4px_4px_rgba(249,124,4,0.3),_-4px_4px_4px_rgba(249,124,4,0.3)]">
+            <div className="w-[221.15px] h-[209.05px] rounded-[43px] border border-orange-500 bg-white overflow-hidden flex items-center justify-center p-6 shadow-[4px_4px_8px_rgba(249,124,4,0.25)]">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/og-image.png"
