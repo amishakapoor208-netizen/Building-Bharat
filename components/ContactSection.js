@@ -23,7 +23,7 @@ export default function ContactSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prev) => (prev + 1) % texts.length)
-    }, 3000) // Change text every 3 seconds
+    }, 300) // Change text every 0.3 seconds (300ms)
 
     return () => clearInterval(interval)
   }, [])
@@ -47,18 +47,18 @@ export default function ContactSection() {
         <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-300 w-full max-w-[1380px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[500px] md:min-h-[600px] lg:h-[758px]">
             {/* Left side - Animated Text and India Map */}
-            <div className="flex flex-col justify-start items-start text-white p-6 md:p-8 lg:pt-20 lg:pl-24 order-2 lg:order-1">
-              {/* Animated Text at Top */}
-              <div className="mb-6 md:mb-8 w-full max-w-[458px]">
+            <div className="flex flex-row lg:flex-col justify-between items-start text-white p-6 md:p-8 lg:pt-20 lg:pl-24 order-1 lg:order-1 gap-4">
+              {/* Animated Text on Left for mobile */}
+              <div className="w-1/2 lg:w-full lg:max-w-[458px] h-[180px] md:h-[200px] lg:h-[240px] flex items-start lg:mb-6 lg:mb-8">
                 <div className="text-left">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight whitespace-pre-line text-white">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight whitespace-pre-line text-white">
                     {texts[currentTextIndex]}
                   </h2>
                 </div>
               </div>
               
-              {/* India Map Image Below */}
-              <div className="relative flex items-center justify-start w-full max-w-[350px] md:max-w-[407px] h-auto aspect-square">
+              {/* India Map Image on Right for mobile */}
+              <div className="relative flex items-center justify-end lg:justify-start w-1/2 lg:w-full max-w-[200px] sm:max-w-[250px] lg:max-w-[407px] h-auto aspect-square">
                 <Image
                   src="/images/india.png"
                   alt="India Map"
@@ -72,7 +72,7 @@ export default function ContactSection() {
             </div>
 
             {/* Right side - Contact Form */}
-            <div className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl m-3 md:m-4 lg:m-8 order-1 lg:order-2">
+            <div className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl m-3 md:m-4 lg:m-8 order-2 lg:order-2">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8 text-center">Contact us</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
