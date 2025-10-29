@@ -42,29 +42,29 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl overflow-hidden shadow-2xl border border-gray-300" style={{ width: '1380px', height: '758px', maxWidth: '100%' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-full">
+    <section className="bg-gray-50 py-10 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-300 w-full max-w-[1380px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[600px] lg:h-[758px]">
             {/* Left side - Animated Text and India Map */}
-            <div className="flex flex-col justify-start items-start text-white p-8" style={{ paddingTop: '80px', paddingLeft: '97px' }}>
+            <div className="flex flex-col justify-start items-start text-white p-6 md:p-8 lg:pt-20 lg:pl-24">
               {/* Animated Text at Top */}
-              <div className="mb-8" style={{ width: '458px', height: '194.7px', padding: '10px' }}>
+              <div className="mb-6 md:mb-8 w-full max-w-[458px]">
                 <div className="text-left">
-                  <h2 className="text-4xl md:text-5xl font-bold leading-tight whitespace-pre-line text-white">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight whitespace-pre-line text-white">
                     {texts[currentTextIndex]}
                   </h2>
                 </div>
               </div>
               
               {/* India Map Image Below */}
-              <div className="relative flex items-center justify-start" style={{ width: '407.37px', height: '361.49px', marginLeft: '30.81px' }}>
+              <div className="relative flex items-center justify-start w-full max-w-[407px] h-auto aspect-square">
                 <Image
                   src="/images/india.png"
                   alt="India Map"
                   width={407}
                   height={361}
-                  className="object-contain"
+                  className="object-contain w-full h-auto"
                   quality={100}
                   priority
                 />
@@ -72,8 +72,8 @@ export default function ContactSection() {
             </div>
 
             {/* Right side - Contact Form */}
-            <div className="bg-white p-8 lg:p-12 rounded-3xl m-4 lg:m-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Contact us</h2>
+            <div className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl m-3 md:m-4 lg:m-8">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8 text-center">Contact us</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}

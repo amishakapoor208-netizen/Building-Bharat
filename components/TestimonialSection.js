@@ -48,9 +48,9 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-emerald-900 mb-10 text-center">Stories That Inspire</h2>
+    <section className="bg-gray-50 py-10 md:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-6 md:mb-10 text-center">Stories That Inspire</h2>
         
         <div className="relative overflow-hidden w-full mx-auto">
           <AnimatePresence mode="wait">
@@ -60,17 +60,17 @@ export default function TestimonialSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="bg-white shadow-lg rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 h-[500px]"
+              className="bg-white shadow-lg rounded-2xl p-6 md:p-8 lg:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-8 min-h-[500px] md:h-[500px]"
             >
               <div className="flex-1 text-left max-w-[683px]">
-                <h3 className="font-semibold text-xl text-gray-900 mb-4">
+                <h3 className="font-semibold text-lg md:text-xl text-gray-900 mb-3 md:mb-4">
                   {testimonials[currentIndex].title}
                 </h3>
-                <p className="font-poppins font-medium text-[18px] leading-[210%] tracking-[0%] text-[#2D2D2D]">
+                <p className="font-poppins font-medium text-[16px] md:text-[18px] leading-[180%] md:leading-[210%] tracking-[0%] text-[#2D2D2D]">
                   "{testimonials[currentIndex].quote}"
                 </p>
-                <div className="mt-6">
-                  <p className="font-semibold text-lg text-orange-500">
+                <div className="mt-4 md:mt-6">
+                  <p className="font-semibold text-base md:text-lg text-orange-500">
                     {testimonials[currentIndex].name}
                   </p>
                   <p className="text-sm text-gray-500">
@@ -80,7 +80,7 @@ export default function TestimonialSection() {
               </div>
               
               <div className="flex-shrink-0">
-                <div className="w-[345.9px] h-[393px] rounded-[35px] overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-xl">
+                <div className="w-[280px] h-[318px] sm:w-[310px] sm:h-[352px] md:w-[345.9px] md:h-[393px] rounded-[25px] md:rounded-[35px] overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-xl">
                   {testimonials[currentIndex].image ? (
                     <Image
                       src={testimonials[currentIndex].image}
@@ -90,7 +90,7 @@ export default function TestimonialSection() {
                       className="object-cover w-full h-full"
                     />
                   ) : (
-                    <div className="text-white text-7xl font-bold">
+                    <div className="text-white text-5xl md:text-7xl font-bold">
                       {testimonials[currentIndex].initials}
                     </div>
                   )}

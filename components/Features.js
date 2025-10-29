@@ -77,27 +77,27 @@ export default function Features() {
       {features.map((feature, index) => (
         <section 
           key={feature.id} 
-          className={index % 2 === 0 ? "bg-white py-20" : "bg-gray-50 py-20"}
+          className={index % 2 === 0 ? "bg-white py-10 md:py-16 lg:py-20" : "bg-gray-50 py-10 md:py-16 lg:py-20"}
         >
-          <div className="max-w-7xl mx-auto px-6">
-            <div className={`flex flex-col lg:flex-row gap-12 items-center justify-center ${
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <div className={`flex flex-col lg:flex-row gap-8 md:gap-12 items-center justify-center ${
               feature.imagePosition === "left" ? "lg:flex-row-reverse" : ""
             }`}>
               {/* Text content - Width: 581px, Height: 314px */}
-              <div className="w-full lg:w-[581px] lg:h-[314px] flex flex-col justify-center">
-                <div className="flex items-center gap-3 mb-4">
+              <div className="w-full lg:w-[581px] lg:min-h-[314px] flex flex-col justify-center">
+                <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
                   {feature.icon}
-                  <h2 className="text-2xl font-bold text-emerald-900">{feature.title}</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-emerald-900">{feature.title}</h2>
                 </div>
                 
-                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                <p className="text-gray-700 text-sm leading-relaxed mb-4 md:mb-6">
                   {feature.description}
                 </p>
 
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   {feature.bulletPoints.map((point, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="text-gray-700 text-sm">{point}</p>
@@ -107,7 +107,7 @@ export default function Features() {
               </div>
 
               {/* Image - Width: 557.24px, Height: 387px, Radius: 38px */}
-              <div className="relative w-full lg:w-[557.24px] h-[387px] rounded-[38px] overflow-hidden shadow-lg flex-shrink-0">
+              <div className="relative w-full max-w-[557.24px] h-[250px] sm:h-[320px] md:h-[387px] rounded-[20px] md:rounded-[38px] overflow-hidden shadow-lg flex-shrink-0">
                 <Image
                   src={feature.image}
                   alt={feature.title}

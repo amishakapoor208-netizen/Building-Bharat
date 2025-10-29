@@ -43,13 +43,13 @@ export default function Stats() {
   ]
 
   return (
-    <section ref={ref} className="bg-gradient-to-b from-[#1DD3C7] via-[#17A89A] to-[#0F8074] py-20 border border-gray-200">
-      <div className="max-w-[1440px] mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Building Bharat Till Date</h2>
-        <p className="text-white/90 text-lg mb-16">Our journey in shaping India's political and policy landscape</p>
+    <section ref={ref} className="bg-gradient-to-b from-[#1DD3C7] via-[#17A89A] to-[#0F8074] py-10 md:py-16 lg:py-20 border border-gray-200">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-6 text-center">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">Building Bharat Till Date</h2>
+        <p className="text-white/90 text-base md:text-lg mb-10 md:mb-12 lg:mb-16">Our journey in shaping India's political and policy landscape</p>
         
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-12 lg:mb-16">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -58,28 +58,28 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl font-bold text-white mb-2">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
                 <CountUp end={stat.number} duration={2.5} isInView={isInView} suffix={stat.suffix} />
               </div>
-              <p className="text-white/90 font-medium">{stat.label}</p>
+              <p className="text-white/90 font-medium text-sm md:text-base">{stat.label}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-[1200px] mx-auto">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-              className="bg-[#0D6B61]/60 backdrop-blur-sm rounded-3xl p-8 text-left border border-white/80 w-full max-w-[366px] h-[191.48px] mx-auto flex flex-col justify-center shadow-lg"
+              className="bg-[#0D6B61]/60 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 text-left border border-white/80 w-full max-w-[366px] min-h-[180px] md:h-[191.48px] mx-auto flex flex-col justify-center shadow-lg"
             >
               <div className="mb-3">
                 {achievement.icon}
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">{achievement.title}</h3>
+              <h3 className="text-base md:text-lg font-bold text-white mb-2">{achievement.title}</h3>
               <p className="text-white/80 text-xs leading-relaxed">{achievement.description}</p>
             </motion.div>
           ))}

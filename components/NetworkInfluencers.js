@@ -64,21 +64,21 @@ export default function NetworkInfluencers() {
   )
 
   return (
-    <section className="bg-white py-20 relative">
-      <div className="max-w-[1440px] mx-auto px-6">
-        <h2 className="text-3xl font-bold text-emerald-900 mb-16 text-center">
+    <section className="bg-white py-10 md:py-16 lg:py-20 relative">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-6">
+        <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold text-emerald-900 mb-8 md:mb-12 lg:mb-16 text-center">
           Our Network & Strategic Influencers
         </h2>
 
         <div className="relative">
           {/* Top scrolling line - scrolls left */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <ScrollingLogos direction="left" />
           </div>
 
           {/* Building Bharat Logo in Center - Width: 221.15px, Height: 209.05px, Radius: 43px, Border: 1px */}
-          <div className="flex justify-center my-8">
-            <div className="w-[221.15px] h-[209.05px] rounded-[43px] border border-orange-500 bg-white overflow-hidden flex items-center justify-center p-6 shadow-[4px_4px_8px_rgba(249,124,4,0.25)]">
+          <div className="flex justify-center my-6 md:my-8">
+            <div className="w-[180px] h-[170px] sm:w-[200px] sm:h-[189px] md:w-[221.15px] md:h-[209.05px] rounded-[30px] md:rounded-[43px] border border-orange-500 bg-white overflow-hidden flex items-center justify-center p-4 md:p-6 shadow-[4px_4px_8px_rgba(249,124,4,0.25)]">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/og-image.png"
@@ -91,7 +91,7 @@ export default function NetworkInfluencers() {
           </div>
 
           {/* Bottom scrolling line - scrolls right */}
-          <div className="mt-12">
+          <div className="mt-8 md:mt-12">
             <ScrollingLogos direction="right" />
           </div>
         </div>

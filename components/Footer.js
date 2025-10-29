@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5F5F5] text-gray-800 py-16 px-6 md:px-12">
+    <footer className="bg-[#F5F5F5] text-gray-800 py-10 md:py-16 px-4 md:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20 items-start">
           {/* Building Bharat Logo and Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
@@ -14,28 +14,28 @@ export default function Footer() {
                 alt="Building Bharat Logo"
                 width={180}
                 height={60}
-                className="mb-3"
+                className="mb-3 w-[140px] md:w-[180px] h-auto"
                 quality={100}
                 priority
               />
             </div>
-            <p className="text-[17px] font-bold text-[#0D5F5C] mb-5 leading-relaxed">
+            <p className="text-[15px] md:text-[17px] font-bold text-[#0D5F5C] mb-4 md:mb-5 leading-relaxed">
               India's most trusted policy & political education platform
             </p>
-            <div className="text-[16px] font-medium text-[#3D3D3D] space-y-1 leading-relaxed">
+            <div className="text-[14px] md:text-[16px] font-medium text-[#3D3D3D] space-y-1 leading-relaxed">
               <p>Plot No XX, Building Bharat Campus,</p>
               <p className="mb-3">New Delhi, India – 110XX</p>
               <p className="flex items-center gap-2">
                 <span>📞</span>
-                <span>Contact Us: +91 XXXXXXXXXX</span>
+                <span className="break-all">Contact Us: +91 XXXXXXXXXX</span>
               </p>
             </div>
           </div>
 
           {/* Building Bharat Links */}
-          <div className="pt-[90px]">
-            <h3 className="text-[20px] font-bold text-[#0D5F5C] mb-6">Building Bharat</h3>
-            <ul className="space-y-3 text-[16px] font-medium text-[#3D3D3D] leading-relaxed">
+          <div className="lg:pt-[90px]">
+            <h3 className="text-[18px] md:text-[20px] font-bold text-[#0D5F5C] mb-4 md:mb-6">Building Bharat</h3>
+            <ul className="space-y-2 md:space-y-3 text-[14px] md:text-[16px] font-medium text-[#3D3D3D] leading-relaxed">
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/blogs">Blogs</Link></li>
@@ -45,9 +45,9 @@ export default function Footer() {
           </div>
 
           {/* Programs Links */}
-          <div className="pt-[90px]">
-            <h3 className="text-[20px] font-bold text-[#0D5F5C] mb-6">Programs</h3>
-            <ul className="space-y-3 text-[16px] font-medium text-[#3D3D3D] leading-relaxed">
+          <div className="lg:pt-[90px]">
+            <h3 className="text-[18px] md:text-[20px] font-bold text-[#0D5F5C] mb-4 md:mb-6">Programs</h3>
+            <ul className="space-y-2 md:space-y-3 text-[14px] md:text-[16px] font-medium text-[#3D3D3D] leading-relaxed">
               <li><Link href="/certificate-courses">Certificate Courses</Link></li>
               <li><Link href="/workshops">Live Workshops</Link></li>
               <li><Link href="/research">Research Projects</Link></li>
@@ -58,9 +58,9 @@ export default function Footer() {
           </div>
 
           {/* Follow Us - Social Media */}
-          <div className="pt-[90px]">
-            <h3 className="text-[20px] font-bold text-[#0D5F5C] mb-6">Follow us</h3>
-            <ul className="space-y-3 text-[16px] font-medium text-[#3D3D3D] leading-relaxed">
+          <div className="lg:pt-[90px]">
+            <h3 className="text-[18px] md:text-[20px] font-bold text-[#0D5F5C] mb-4 md:mb-6">Follow us</h3>
+            <ul className="space-y-2 md:space-y-3 text-[14px] md:text-[16px] font-medium text-[#3D3D3D] leading-relaxed">
               <li>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
