@@ -18,6 +18,7 @@ export default function Home() {
         <title>Building Bharat - Transform Bharat Through Policy & Leadership</title>
         <meta name="description" content="Join Building Bharat to crack political and policy roles with confidence. Learn, lead, and transform Bharat through expert mentorship and world-class curriculum." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/og-image.png" />
       </Head>
       <Header />
       <main>
