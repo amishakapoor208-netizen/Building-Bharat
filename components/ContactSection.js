@@ -23,7 +23,7 @@ export default function ContactSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prev) => (prev + 1) % texts.length)
-    }, 150) // Change text every 0.15 seconds (150ms)
+    }, 3000) // Change text every 3 seconds
 
     return () => clearInterval(interval)
   }, [])
@@ -45,9 +45,9 @@ export default function ContactSection() {
     <section className="bg-gray-50 py-10 md:py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-300 w-full max-w-[1380px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[600px] lg:h-[758px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[500px] md:min-h-[600px] lg:h-[758px]">
             {/* Left side - Animated Text and India Map */}
-            <div className="flex flex-col justify-start items-start text-white p-6 md:p-8 lg:pt-20 lg:pl-24">
+            <div className="flex flex-col justify-start items-start text-white p-6 md:p-8 lg:pt-20 lg:pl-24 order-2 lg:order-1">
               {/* Animated Text at Top */}
               <div className="mb-6 md:mb-8 w-full max-w-[458px]">
                 <div className="text-left">
@@ -58,7 +58,7 @@ export default function ContactSection() {
               </div>
               
               {/* India Map Image Below */}
-              <div className="relative flex items-center justify-start w-full max-w-[407px] h-auto aspect-square">
+              <div className="relative flex items-center justify-start w-full max-w-[350px] md:max-w-[407px] h-auto aspect-square">
                 <Image
                   src="/images/india.png"
                   alt="India Map"
@@ -72,7 +72,7 @@ export default function ContactSection() {
             </div>
 
             {/* Right side - Contact Form */}
-            <div className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl m-3 md:m-4 lg:m-8">
+            <div className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl m-3 md:m-4 lg:m-8 order-1 lg:order-2">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8 text-center">Contact us</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
